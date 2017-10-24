@@ -6,7 +6,6 @@
 
 pthread_t tid[2];
 int mkn, stat[2]={100,100}; // 0 = Lohan, 1 = Kepiting
-int loop=1;
 
 void* playandcount(void *arg) {
     pthread_t id=pthread_self();
