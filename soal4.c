@@ -17,7 +17,7 @@ void* faktorial(){
 }
 
 int main(void){
-
+	
 	
 
 	
