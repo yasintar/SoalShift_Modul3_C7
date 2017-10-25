@@ -7,6 +7,18 @@
 void* findstring(void *arg){
 	int count = 0;
 	printf("%s: %d\n", arg, count);
+	
+	char file[] = "Novel.txt", ch;
+    	FILE *file_ptr;
+
+	if((file_ptr = fopen(file, "r")) != NULL){
+	        while((ch = fgetc(file_ptr)) != EOF){
+ 	           putchar(ch);
+        	}
+    	} else{
+	        printf("Could not open %s\n", file);}
+
+    	return NULL;
 }
 
 int main(int argc, char *argv[]){
