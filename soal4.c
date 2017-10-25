@@ -35,22 +35,6 @@ int main(void){
 	pthread_create(&(tid),NULL,&faktorial,NULL);
 	pthread_join(tid,NULL);
 	
-/*	int i;
-	int hasil;
-	void *status = 0;
-	
-	scanf("%d",&n);
-			
-	pthread_create(&tid,NULL,faktorial,&hasil);
-	pthread_join(tid,&hasil);
-	
-	if(status != 0){
-		printf("%d\n",hasil);
-	} else {
-		printf("Can't create thread.\n");
-	}	*/
-	
-	
 	return 0;
 	
 }
