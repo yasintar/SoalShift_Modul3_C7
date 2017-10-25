@@ -15,7 +15,7 @@ void* faktorial(void *arg){
 	pthread_t id=pthread_self();
 	scanf("%d",&n);
 	
-	if(pthread_equal(id,tid[i])){
+	if(pthread_equal(id,tid)){
 		if(n < 0) printf("Error.\n");
 		else {
 			for(i=1; i<=n; i++){
