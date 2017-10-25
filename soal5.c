@@ -5,20 +5,13 @@
 #include <string.h>
 
 void* findstring(void *arg){
-	int count = 0;
-	printf("%s: %d\n", arg, count);
-	
-	char file[] = "Novel.txt", ch;
-    	FILE *file_ptr;
-
-	if((file_ptr = fopen(file, "r")) != NULL){
-	        while((ch = fgetc(file_ptr)) != EOF){
- 	           putchar(ch);
-        	}
-    	} else{
-	        printf("Could not open %s\n", file);}
-
-    	return NULL;
+	int count=0;
+	char *string=(char*)arg;
+	FILE *fp=fopen("novel.txt","r");
+	char len[256];
+	while(fscanf(fp,"%s",len)!=EOF)
+	if(!strncmp(len,string,strlen(string)))count++;
+	printf("%s : %d \n", arg, count);
 }
 
 int main(int argc, char *argv[]){
@@ -30,10 +23,6 @@ int main(int argc, char *argv[]){
 	if(argc<2){
 		printf("Masukan minimal 2 argument\n");
 	}
-
-	//for(i=1;i<argc;i++){
-	//	printf("%s\n",argv[i]);
-	//}
 
 	for(i=1;i<argc;i++){
 		int err;
