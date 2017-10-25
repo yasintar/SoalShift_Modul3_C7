@@ -9,9 +9,9 @@ pthread_t tid;
 
 void* faktorial(void *arg){
 	int i;
-	int asu = (int)arg;
+	int n = (int)arg;
 	unsigned long long bilangan=1;
-	for(i=1; i<=asu; i++)bilangan = bilangan * i;
+	for(i=1; i<=n; i++)bilangan = bilangan * i;
 	printf("Hasil %d! = %llu\n",arg,bilangan);
 }
 
